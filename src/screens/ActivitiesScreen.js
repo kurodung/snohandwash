@@ -2,7 +2,7 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { GreenButton } from '../components/GreenButton';
-import { activitiesByStatusAndMoment } from '../data/activitiesData';
+import { activitiesByStatusAndMoment } from '../data/ActivitiesData';
 
 export default function ActivitiesScreen() {
   const navigate = useNavigate();
