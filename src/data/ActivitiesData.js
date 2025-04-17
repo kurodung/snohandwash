@@ -21,7 +21,7 @@ export const invasiveActivities = [
     'กิจกรรม invasive อื่น',
   ];
   
-  export const basicExam = [
+  export const basicDoc = [
     'ตรวจเยี่ยมผู้ป่วย',
     'ซักประวัติ',
     'สัมผัสตัวผู้ป่วย',
@@ -32,10 +32,34 @@ export const invasiveActivities = [
   // ตัวอย่างข้อมูลกิจกรรมจำแนกตาม status และ moment
   export const activitiesByStatusAndMoment = {
     'อาจารย์แพทย์': {
-      'Moment 1 ก่อนสัมผัสผู้ป่วย': basicExam,
+      'Moment 1 ก่อนสัมผัสผู้ป่วย': basicDoc,
       'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': [...invasiveActivities,'เจาะเลือด',],
       'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': invasiveActivities,
-      'Moment 4 หลังสัมผัสผู้ป่วย': basicExam,
+      'Moment 4 หลังสัมผัสผู้ป่วย': basicDoc,
+      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': 'สัมผัสสิ่งแวดล้อมในโซนผู้ป่วย', 
+    },
+
+    'แพทย์ประจำบ้าน': {
+      'Moment 1 ก่อนสัมผัสผู้ป่วย': basicDoc,
+      'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': [...invasiveActivities,'เจาะเลือด',],
+      'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': invasiveActivities,
+      'Moment 4 หลังสัมผัสผู้ป่วย': basicDoc,
+      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': 'สัมผัสสิ่งแวดล้อมในโซนผู้ป่วย', 
+    },
+
+    'นักศึกษาแพทย์': {
+      'Moment 1 ก่อนสัมผัสผู้ป่วย': basicDoc,
+      'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': [...invasiveActivities,'เจาะเลือด',],
+      'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': invasiveActivities,
+      'Moment 4 หลังสัมผัสผู้ป่วย': basicDoc,
+      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': 'สัมผัสสิ่งแวดล้อมในโซนผู้ป่วย', 
+    },
+
+    'พยาบาล': {
+      'Moment 1 ก่อนสัมผัสผู้ป่วย': [...basicDoc,'เจาะเลือด',],
+      'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': [...invasiveActivities,'เจาะเลือด',],
+      'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': invasiveActivities,
+      'Moment 4 หลังสัมผัสผู้ป่วย': basicDoc,
       'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': 'สัมผัสสิ่งแวดล้อมในโซนผู้ป่วย', 
     },
   
