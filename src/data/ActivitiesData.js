@@ -8,7 +8,6 @@ export const invasiveActivities = [
     'ตัดชิ้นเนื้อ',
     'แทง central line/ off central line',
     'ทำแผล central line',
-    'เจาะเลือด',
     'เจาะ ABG',
     'ฉีดยาIV',
     'แทง IV/ off IV',
@@ -23,24 +22,21 @@ export const invasiveActivities = [
   ];
   
   export const basicExam = [
-    'ตรวจร่างกายผู้ป่วย',
+    'ตรวจเยี่ยมผู้ป่วย',
     'ซักประวัติ',
+    'สัมผัสตัวผู้ป่วย',
+    'สัมผัสอุปกรณ์ที่สอดใส่เข้าไปในร่างกาย เช่น ET tube, IV, foley',
+    ' วัด V/S วัดไข้ วัด BP ',
   ];
   
   // ตัวอย่างข้อมูลกิจกรรมจำแนกตาม status และ moment
   export const activitiesByStatusAndMoment = {
     'อาจารย์แพทย์': {
-      'Moment 1 ก่อนสัมผัสผู้ป่วย': [
-        'ตรวจเยี่ยมผู้ป่วย',
-        'สัมผัสตัวผู้ป่วย',
-        'สัมผัสอุปกรณ์ที่สอดใส่เข้าไปในร่างกาย เช่น ET tube, IV, foley',
-        'กิจกรรม non invasive อื่น',
-        'วัด V/S วัดไข้ วัด BP',
-      ],
-      'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': invasiveActivities,
+      'Moment 1 ก่อนสัมผัสผู้ป่วย': basicExam,
+      'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': [...invasiveActivities,'เจาะเลือด',],
       'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': invasiveActivities,
       'Moment 4 หลังสัมผัสผู้ป่วย': basicExam,
-      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': basicExam,
+      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': 'สัมผัสสิ่งแวดล้อมในโซนผู้ป่วย', 
     },
   
     // ✅ เพิ่ม status อื่นๆ ได้ที่นี่
