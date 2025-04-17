@@ -1,6 +1,4 @@
 // data/activitiesData.js
-
-// กลุ่มกิจกรรมซ้ำๆ
 export const invasiveActivities = [
     'prep skin pre-op',
     'เข้าเคสผ่าตัด',
