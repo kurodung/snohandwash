@@ -28,6 +28,8 @@ export const invasiveActivities = [
     'สัมผัสอุปกรณ์ที่สอดใส่เข้าไปในร่างกาย เช่น ET tube, IV, foley',
     ' วัด V/S วัดไข้ วัด BP ',
   ];
+
+  export const beforetouch = ['สัมผัสสิ่งแวดล้อมในโซนผู้ป่วย']
   
   // ตัวอย่างข้อมูลกิจกรรมจำแนกตาม status และ moment
   export const activitiesByStatusAndMoment = {
@@ -36,7 +38,7 @@ export const invasiveActivities = [
       'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': [...invasiveActivities,'เจาะเลือด',],
       'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': invasiveActivities,
       'Moment 4 หลังสัมผัสผู้ป่วย': basicDoc,
-      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': 'สัมผัสสิ่งแวดล้อมในโซนผู้ป่วย', 
+      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': beforetouch, 
     },
 
     'แพทย์ประจำบ้าน': {
@@ -44,7 +46,7 @@ export const invasiveActivities = [
       'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': [...invasiveActivities,'เจาะเลือด',],
       'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': invasiveActivities,
       'Moment 4 หลังสัมผัสผู้ป่วย': basicDoc,
-      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': 'สัมผัสสิ่งแวดล้อมในโซนผู้ป่วย', 
+      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': beforetouch, 
     },
 
     'นักศึกษาแพทย์': {
@@ -52,7 +54,7 @@ export const invasiveActivities = [
       'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': [...invasiveActivities,'เจาะเลือด',],
       'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': invasiveActivities,
       'Moment 4 หลังสัมผัสผู้ป่วย': basicDoc,
-      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': 'สัมผัสสิ่งแวดล้อมในโซนผู้ป่วย', 
+      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': beforetouch, 
     },
 
     'พยาบาล': {
@@ -60,7 +62,7 @@ export const invasiveActivities = [
       'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': [...invasiveActivities,'เจาะเลือด',],
       'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': invasiveActivities,
       'Moment 4 หลังสัมผัสผู้ป่วย': basicDoc,
-      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': 'สัมผัสสิ่งแวดล้อมในโซนผู้ป่วย', 
+      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': beforetouch, 
     },
   
     // ✅ เพิ่ม status อื่นๆ ได้ที่นี่
