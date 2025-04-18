@@ -62,6 +62,16 @@ export const NurseActiviti = [
     'กิจกรรม invasive อื่น',
 ];
 
+export const basicAssNurse = [
+  'ตรวจเยี่ยมผู้ป่วย',
+  'สัมผัสตัวผู้ป่วย',
+  'สัมผัสอุปกรณ์ที่สอดใส่เข้าไปในร่างกาย เช่น ET tube, IV, foley',
+  'เคลื่อนย้ายผู้ป่วย พลิกตัว จัดท่า',
+  'วัด V/S วัดไข้ วัด BP',
+  'Bed bath',
+  'กิจกรรม non invasive อื่น',
+];
+
 export const AssNurseActiviti = [
   'off IV',
   'เปลี่ยน IV fluid/เตรียม IV fluid',
@@ -76,15 +86,6 @@ export const AssNurseActiviti = [
   'ช่วยทำกิจกรรม invasive อื่น',
 ];
 
-export const basicAssNurse = [
-  'ตรวจเยี่ยมผู้ป่วย',
-  'สัมผัสตัวผู้ป่วย',
-  'สัมผัสอุปกรณ์ที่สอดใส่เข้าไปในร่างกาย เช่น ET tube, IV, foley',
-  'เคลื่อนย้ายผู้ป่วย พลิกตัว จัดท่า',
-  'วัด V/S วัดไข้ วัด BP',
-  'Bed bath',
-  'กิจกรรม non invasive อื่น',
-];
 
 export const aftertouch = ['สัมผัสสิ่งแวดล้อมในโซนผู้ป่วย']
   

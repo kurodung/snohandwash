@@ -7,12 +7,16 @@ import HandwashingMethodScreen from './screens/HandwashingMethodScreen';
 import HandwashQualityScreen from './screens/HandwashQualityScreen';
 import EvaluatorScreen from './screens/EvaluatorScreen';
 import SuggestionScreen from './screens/SuggestionScreen';
+
+import { LogoTitle } from './components/LogoTitle'; // ✅ นำเข้าหัวข้อ
+
 import './App.css';
 
 function App() {
   return (
     <Router>
       <div className="app-container">
+        <LogoTitle /> {/* ✅ วางตรงนี้เพื่อให้แสดงบนทุกหน้า */}
         <Routes>
           <Route path="/" element={<Navigate to="/status" />} />
           <Route path="/status" element={<StatusScreen />} />
@@ -29,3 +33,4 @@ function App() {
 }
 
 export default App;
+
