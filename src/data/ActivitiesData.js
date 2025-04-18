@@ -96,16 +96,8 @@ export const activitiesByStatusAndMoment = {
       'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': DocActivities,
       'Moment 4 หลังสัมผัสผู้ป่วย': basicDoc,
       'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': aftertouch, 
-},
-
-    'แพทย์ประจำบ้าน': {
-      'Moment 1 ก่อนสัมผัสผู้ป่วย': basicDoc,
-      'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': ['เจาะเลือด',...DocActivities],
-      'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': DocActivities,
-      'Moment 4 หลังสัมผัสผู้ป่วย': basicDoc,
-      'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': aftertouch, 
     },
-
+    
     'นักศึกษาแพทย์': {
       'Moment 1 ก่อนสัมผัสผู้ป่วย': basicDoc,
       'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': ['เจาะเลือด',...DocActivities],
@@ -122,7 +114,7 @@ export const activitiesByStatusAndMoment = {
       'Moment 5 หลังสัมผัสสิ่งแวดล้อมผู้ป่วย': [...aftertouch,'เก็บรวบรวมผ้าเปื้อน','ทำความสะอาดสิ่งแวดล้อม']
     },
     
-    'ผู้ช่วยพยาบาล': {
+    'ผู้ช่วยเหลือพยาบาล / ผู้ช่วยเหลือคนไข้': {
       'Moment 1 ก่อนสัมผัสผู้ป่วย': basicNurse,
       'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ': ['จัดเตรียม set sterile',...AssNurseActiviti],
       'Moment 3 หลังสัมผัสเลือด สารคัดหลั่ง': [...AssNurseActiviti,'เทปัสสาวะ','เก็บ set ต่างๆ', 'ล้างทำความสะอาดอุปกรณ์','เก็บรวบรวมผ้าเปื้อน'],
