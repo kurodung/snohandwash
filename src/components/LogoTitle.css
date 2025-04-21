@@ -1,29 +1,33 @@
 .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .logo-image {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .title-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #135e3e;
-  }
-  
-  .subtitle {
-    font-size: 12px;
-    color: #135e3e;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ซ้ายแบบภาพ */
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo-image {
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #135e3e;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #135e3e;
+}

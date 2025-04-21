@@ -1,0 +1,25 @@
+.custom-back-button {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #135e3e;
+    border-radius: 10px;
+    padding: 6px 14px;
+    color: #135e3e;
+    background-color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    width: fit-content;
+    cursor: pointer;
+    margin-bottom: 16px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .custom-back-button:hover {
+    background-color: #e6f3ec;
+  }
+  
+  .back-icon {
+    margin-right: 6px;
+    font-size: 20px;
+  }
+  
