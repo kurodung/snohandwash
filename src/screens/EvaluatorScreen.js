@@ -6,7 +6,11 @@ import { GreenButton } from '../components/GreenButton';
 export default function EvaluatorScreen() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { status, moment, activity, method, quality } = location.state || {};
+  // เพิ่ม stepResults ในการรับค่า
+  const { status, moment, activity, method, quality, stepResults } = location.state || {};
+  
+  // เพื่อการ debug
+  console.log("Received in EvaluatorScreen:", location.state);
   
   const evaluators = [
     'ICWN',
@@ -26,7 +30,8 @@ export default function EvaluatorScreen() {
             key={index}
             title={evaluator}
             onPress={() => navigate('/suggestion', { 
-              state: { status, moment, activity, method, quality, evaluator } 
+              // เพิ่ม stepResults ในการส่งค่า
+              state: { status, moment, activity, method, quality, evaluator, stepResults } 
             })}
           />
         ))}

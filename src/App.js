@@ -7,6 +7,7 @@ import HandwashingMethodScreen from './screens/HandwashingMethodScreen';
 import HandwashQualityScreen from './screens/HandwashQualityScreen';
 import EvaluatorScreen from './screens/EvaluatorScreen';
 import SuggestionScreen from './screens/SuggestionScreen';
+import HandwashStepsScreen from './screens/HandwashStepsScreen';
 
 import { LogoTitle } from './components/LogoTitle';
 import { BackButton } from './components/BackButton';
@@ -31,6 +32,7 @@ function AppContent() {
         <Route path="/handwashing-method" element={<HandwashingMethodScreen />} />
         <Route path="/handwash-quality" element={<HandwashQualityScreen />} />
         <Route path="/evaluator" element={<EvaluatorScreen />} />
+        <Route path="/handwash-steps" element={<HandwashStepsScreen />} />
         <Route path="/suggestion" element={<SuggestionScreen />} />
       </Routes>
     </div>
