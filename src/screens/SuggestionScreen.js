@@ -1,6 +1,7 @@
 //screens/SuggestionScreen.js
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { GreenButton } from '../components/GreenButton';
 import { submitHandwashingData } from '../api/googleAppsScript';
 
 export default function SuggestionScreen() {
@@ -72,13 +73,11 @@ export default function SuggestionScreen() {
           value={suggestion}
         />
 
-        <button
-          className="submit-button"
-          onClick={handleSubmit}
+        <GreenButton
+          title={isSubmitting ? "กำลังส่งข้อมูล..." : "บันทึกข้อมูล"}
+          onPress={handleSubmit}
           disabled={isSubmitting}
-        >
-          {isSubmitting ? "กำลังส่งข้อมูล..." : "บันทึกข้อมูล"}
-        </button>
+        />
       </div>
     </div>
   );

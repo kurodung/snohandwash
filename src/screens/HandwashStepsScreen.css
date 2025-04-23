@@ -4,25 +4,19 @@
     margin: 0 auto;
   }
   
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #22543d;
-    margin-bottom: 24px;
-  }
-  
   .step-item {
     margin-bottom: 24px;
   }
   
   .step-label {
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 8px;
   }
   
   .button-group {
     display: flex;
     gap: 12px;
+    justify-content: center; 
   }
   
   .select-button {

@@ -5,12 +5,12 @@ import { GreenButton } from '../components/GreenButton';
 import './HandwashStepsScreen.css';
 
 const steps = [
-  "Step1: ",
-  "Step2: ",
-  "Step3: ",
-  "Step4: ",
-  "Step5: ",
-  "Step6: "
+  "Step1: ฟอกฝ่ามือและง่ามนิ้วมือด้านหน้า",
+  "Step2: ฟอกหลังมือและง่ามนิ้วมือด้านหลัง",
+  "Step3: ฟอกนิ้วและข้อนิ้วมือด้านหลัง",
+  "Step4: ฟอกนิ้วหัวแม่มือ ทั้ง 2 ข้าง",
+  "Step5: ฟอกปลายนิ้วมือ ทั้ง 2 ข้าง",
+  "Step6: ฟอกรอบข้อมือ ทั้ง 2 ข้าง"
 ];
 
 export default function HandwashStepsScreen() {

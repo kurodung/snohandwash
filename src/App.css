@@ -12,10 +12,10 @@
 }
 
 .header-text {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  color: #135e3e;
-  margin: 16px 0;
+  color: #7d1d97;
+  margin: 0px 0;
 }
 
 .button-container {
@@ -26,11 +26,11 @@
 }
 
 .form-container {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .summary-container {
-  background-color: #f0f8f3;
+  background-color: #f7f0f8;
   padding: 16px;
   border-radius: 10px;
   margin-bottom: 16px;
@@ -39,7 +39,7 @@
 .summary-title {
   font-weight: bold;
   margin-bottom: 10px;
-  color: #135e3e;
+  color: #7d1d97;
 }
 
 .text-input {
