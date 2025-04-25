@@ -43,7 +43,7 @@ function AppContent() {
 function App() {
   return (
     <Router>
-      <ScrollToTop /> {/* ✅ เพิ่มตรงนี้ให้ Scroll ทุกครั้งที่เปลี่ยนหน้า */}
+      <ScrollToTop /> 
       <AppContent />
     </Router>
   );
