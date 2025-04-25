@@ -8,6 +8,7 @@ import HandwashQualityScreen from './screens/HandwashQualityScreen';
 import EvaluatorScreen from './screens/EvaluatorScreen';
 import SuggestionScreen from './screens/SuggestionScreen';
 import HandwashStepsScreen from './screens/HandwashStepsScreen';
+import { ScrollToTop } from './components/ScrollToTop'; 
 
 import { LogoTitle } from './components/LogoTitle';
 import { BackButton } from './components/BackButton';
@@ -42,6 +43,7 @@ function AppContent() {
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* ✅ เพิ่มตรงนี้ให้ Scroll ทุกครั้งที่เปลี่ยนหน้า */}
       <AppContent />
     </Router>
   );

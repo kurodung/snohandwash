@@ -1,13 +1,29 @@
 // screens/ActivitiesScreen.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { GreenButton } from '../components/GreenButton';
 import { activitiesByStatusAndMoment } from '../data/ActivitiesData';
+
+// ✅ ย้ายมานอก component
+const skipStatuses = [
+  'พนักงานเปล',
+  'นักกายภาพบำบัด',
+  'เจ้าหน้าที่ x-ray',
+  'เจ้าหน้าที่ห้อง lab',
+  'อื่นๆ',
+];
 
 export default function ActivitiesScreen() {
   const navigate = useNavigate();
   const location = useLocation();
   const { status, moment } = location.state || {};
+
+  // ✅ ถ้าสถานะอยู่ในรายการ skip ให้ข้ามไป handwashing-method เลย
+  useEffect(() => {
+    if (skipStatuses.includes(status)) {
+      navigate('/handwashing-method', { state: { status, moment }, replace: true });
+    }
+  }, [status, moment, navigate]);
 
   const activities = activitiesByStatusAndMoment[status]?.[moment] || [];
 
