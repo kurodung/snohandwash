@@ -9,7 +9,7 @@ import EvaluatorScreen from './screens/EvaluatorScreen';
 import SuggestionScreen from './screens/SuggestionScreen';
 import HandwashStepsScreen from './screens/HandwashStepsScreen';
 import { ScrollToTop } from './components/ScrollToTop'; 
-
+import DepartmentScreen from './screens/DepartmentScreen';
 import { LogoTitle } from './components/LogoTitle';
 import { BackButton } from './components/BackButton';
 
@@ -28,6 +28,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Navigate to="/status" />} />
         <Route path="/status" element={<StatusScreen />} />
+        <Route path="/department" element={<DepartmentScreen />} />
         <Route path="/moments" element={<MomentsScreen />} />
         <Route path="/activities" element={<ActivitiesScreen />} />
         <Route path="/handwashing-method" element={<HandwashingMethodScreen />} />

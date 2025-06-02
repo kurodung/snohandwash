@@ -1,14 +1,14 @@
 // screens/HandwashQualityScreen.js
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { GreenButton } from '../components/GreenButton'; // <-- ใช้ GreenButton จริงจังนะจ๊ะ
+import { GreenButton } from '../components/GreenButton'; 
 
 export default function HandwashQualityScreen() {
   const navigate = useNavigate();
   const location = useLocation();
   
   // รับค่าจากหน้าก่อนหน้า
-  const { status, moment, activity, method } = location.state || {};  
+  const { status, department, moment, activity, method } = location.state || {};  
 
   // ตัวเลือกคุณภาพขึ้นกับวิธีการล้างมือ
   const qualityOptions = {
@@ -40,13 +40,13 @@ export default function HandwashQualityScreen() {
               // ถ้าเลือก "ไม่ครบ 6 ขั้นตอน" → ไปที่หน้าเลือก step
               if (option.includes("ไม่ครบ 6 ขั้นตอน")) {
                 navigate('/handwash-steps', {
-                  state: { status, moment, activity, method, quality: option }
+                  state: { status, department, moment, activity, method, quality: option }
                 });
               }
               // ถ้าเลือก "ไม่ได้ล้างมือเลย" หรือ "ครบ 6 ขั้นตอน" → ไปหน้าผู้ประเมิน
               else {
                 navigate('/evaluator', {
-                  state: { status, moment, activity, method, quality: option }
+                  state: { status, department, moment, activity, method, quality: option }
                 });
               }
             }}

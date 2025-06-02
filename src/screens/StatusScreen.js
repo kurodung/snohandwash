@@ -28,7 +28,7 @@ export default function StatusScreen() {
           <GreenButton
             key={index}
             title={status}
-            onPress={() => navigate('/moments', { state: { status } })}
+            onPress={() => navigate('/department', { state: { status } })}
           />
         ))}
       </div>

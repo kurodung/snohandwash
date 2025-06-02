@@ -17,7 +17,7 @@ export default function HandwashStepsScreen() {
   const navigate = useNavigate();
   const location = useLocation();
   // evaluator อาจไม่จำเป็นในหน้านี้ เนื่องจากยังไม่ได้ถูกเลือก
-  const { status, moment, activity, method, quality } = location.state || {};
+  const { status, department, moment, activity, method, quality } = location.state || {};
 
   console.log("Received in HandwashStepsScreen:", location.state);
 
@@ -46,6 +46,7 @@ export default function HandwashStepsScreen() {
     navigate('/evaluator', {
       state: {
         status,
+        department,
         moment,
         activity,
         method,

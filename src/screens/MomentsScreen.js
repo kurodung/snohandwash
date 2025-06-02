@@ -6,8 +6,8 @@ import { GreenButton } from '../components/GreenButton';
 export default function MomentsScreen() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { status } = location.state || {};
-  
+  const { status, department } = location.state || {};
+
   const moments = [
     'Moment 1 ก่อนสัมผัสผู้ป่วย',
     'Moment 2 ก่อนทำกิจกรรมสะอาด ปราศจากเชื้อ',
@@ -18,13 +18,13 @@ export default function MomentsScreen() {
 
   return (
     <div className="screen-container">
-      <h1 className="header-text">{status}: Indications ของการทำความสะอาด (Moments)</h1>
+      <h1 className="header-text">{status} - {department}</h1>
       <div className="button-container">
         {moments.map((moment, index) => (
           <GreenButton
             key={index}
             title={moment}
-            onPress={() => navigate('/activities', { state: { status, moment } })}
+            onPress={() => navigate('/activities', { state: { status, department, moment } })}
           />
         ))}
       </div>

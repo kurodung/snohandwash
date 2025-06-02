@@ -6,7 +6,7 @@ import { GreenButton } from '../components/GreenButton';
 export default function HandwashingMethodScreen() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { status, moment, activity } = location.state || {};
+  const { status, department, moment, activity } = location.state || {};
   
   const methods = [
     'Hand rub',
@@ -23,7 +23,7 @@ export default function HandwashingMethodScreen() {
             key={index}
             title={method}
             onPress={() => navigate('/handwash-quality', { 
-              state: { status, moment, activity, method } 
+              state: { status, department, moment, activity, method } 
             })}
           />
         ))}

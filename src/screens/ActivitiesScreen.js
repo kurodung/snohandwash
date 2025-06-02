@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { GreenButton } from '../components/GreenButton';
 import { activitiesByStatusAndMoment } from '../data/ActivitiesData';
 
-// ✅ ย้ายมานอก component
+// รายการที่ข้ามเลยว่าล้างถูกหรือผิด
 const skipStatuses = [
   'พนักงานเปล',
   'นักกายภาพบำบัด',
@@ -16,14 +16,14 @@ const skipStatuses = [
 export default function ActivitiesScreen() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { status, moment } = location.state || {};
+  const { status, department, moment } = location.state || {};
 
   // ✅ ถ้าสถานะอยู่ในรายการ skip ให้ข้ามไป handwashing-method เลย
   useEffect(() => {
     if (skipStatuses.includes(status)) {
-      navigate('/handwashing-method', { state: { status, moment }, replace: true });
+      navigate('/handwashing-method', { state: { status, department, moment }, replace: true });
     }
-  }, [status, moment, navigate]);
+  }, [status, department, moment, navigate]);
 
   const activities = activitiesByStatusAndMoment[status]?.[moment] || [];
 
@@ -38,7 +38,7 @@ export default function ActivitiesScreen() {
               title={activity}
               onPress={() =>
                 navigate('/handwashing-method', {
-                  state: { status, moment, activity },
+                  state: { status, department, moment, activity },
                 })
               }
             />

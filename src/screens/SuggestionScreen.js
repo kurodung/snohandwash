@@ -22,6 +22,7 @@ export default function SuggestionScreen() {
     // สร้างค่า step1 ถึง step6 เสมอ (ถ้าไม่มี ให้ใช้ค่าว่าง)
     const dataToSubmit = {
       status: formData.status || '',
+      department: formData.department || '',
       moment: formData.moment || '',
       activity: formData.activity || '',
       method: formData.method || '',
@@ -58,6 +59,7 @@ export default function SuggestionScreen() {
         <div className="summary-container">
           <p className="summary-title">สรุปข้อมูลที่จะบันทึก:</p>
           <p>สถานะ: {formData.status}</p>
+          <p>หน่วยงาน: {formData.department}</p>
           <p>Moment: {formData.moment}</p>
           <p>กิจกรรม: {formData.activity}</p>
           <p>วิธีการล้างมือ: {formData.method}</p>
