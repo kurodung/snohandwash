@@ -1,10 +1,9 @@
 // screens/ActivitiesScreen.js
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { GreenButton } from '../components/GreenButton';
 import { activitiesByStatusAndMoment } from '../data/ActivitiesData';
 
-// รายการที่ข้ามเลยว่าล้างถูกหรือผิด
 const skipStatuses = [
   'พนักงานเปล',
   'นักกายภาพบำบัด',
@@ -18,7 +17,8 @@ export default function ActivitiesScreen() {
   const location = useLocation();
   const { status, department, moment } = location.state || {};
 
-  // ✅ ถ้าสถานะอยู่ในรายการ skip ให้ข้ามไป handwashing-method เลย
+  const [searchTerm, setSearchTerm] = useState('');
+
   useEffect(() => {
     if (skipStatuses.includes(status)) {
       navigate('/handwashing-method', { state: { status, department, moment }, replace: true });
@@ -27,12 +27,27 @@ export default function ActivitiesScreen() {
 
   const activities = activitiesByStatusAndMoment[status]?.[moment] || [];
 
+  const filteredActivities = activities.filter((activity) =>
+    activity.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="screen-container">
       <h1 className="header-text">กิจกรรมใน {moment} ({status})</h1>
+
+      <form className="search-form" onSubmit={(e) => e.preventDefault()}>
+        <input
+          type="text"
+          className="search-input"
+          placeholder="ค้นหากิจกรรม"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </form>
+
       <div className="button-container">
-        {activities.length > 0 ? (
-          activities.map((activity, index) => (
+        {filteredActivities.length > 0 ? (
+          filteredActivities.map((activity, index) => (
             <GreenButton
               key={index}
               title={activity}
@@ -45,7 +60,7 @@ export default function ActivitiesScreen() {
           ))
         ) : (
           <p style={{ textAlign: 'center', marginTop: '20px' }}>
-            ไม่มีกิจกรรมในสถานะและ Moment นี้
+            ไม่มีกิจกรรมที่ตรงกับคำค้นหา
           </p>
         )}
       </div>
