@@ -1,5 +1,5 @@
 // screens/DepartmentScreen.js
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { GreenButton } from '../components/GreenButton';
 
@@ -18,6 +18,7 @@ export default function DepartmentScreen() {
   const navigate = useNavigate();
   const location = useLocation();
   const { status } = location.state || {};
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleSelect = (department) => {
     navigate('/moments', {
@@ -25,11 +26,34 @@ export default function DepartmentScreen() {
     });
   };
 
+  const handleInputSubmit = (e) => {
+    e.preventDefault();
+    const trimmed = searchTerm.trim();
+    if (trimmed) {
+      handleSelect(trimmed);
+    }
+  };
+
+  const filteredDepartments = departments.filter((dep) =>
+    dep.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="screen-container">
       <h1 className="header-text">เลือกหน่วยงาน (Department)</h1>
+
+      <form onSubmit={handleInputSubmit} className="search-form">
+        <input
+          type="text"
+          placeholder="พิมพ์ชื่อหน่วยงาน"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-input"
+        />
+      </form>
+
       <div className="button-container">
-        {departments.map((dep, index) => (
+        {filteredDepartments.map((dep, index) => (
           <GreenButton
             key={index}
             title={dep}

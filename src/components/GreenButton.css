@@ -20,3 +20,27 @@
     background-color: #85a596;
     cursor: not-allowed;
   }
+
+/* DepartmentScreen.css */
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  margin-top: 20px;
+}
+
+.search-input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+  border-color: #641466; /* สีเขียว */
+  box-shadow: 0 0 0 2px rgba(164, 64, 211, 0.3);
+}
